@@ -13,5 +13,4 @@ docker pull [image] - download image
 docker search [keyword] - search for images from the docker hub
 docker run [image:tag] - runs the image
 docker inspect [image or imageID] - show information about the image
-docker ps - show what images are running [-a - all you run]
 
