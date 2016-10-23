@@ -1,0 +1,16 @@
+Docker repo [Centos 7]
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/7
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+
+cd /var/run && ls -al dock*
+usermod -a -G docker [username] - to run as non root users
+docker images - show downloaded images
+docker pull [image] - download image
+docker search [keyword] - search for images from the docker hub
+docker run [image:tag] - runs the image
+docker inspect [image or imageID] - show information about the image
+
