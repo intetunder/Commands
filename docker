@@ -49,3 +49,6 @@ docker rm [dockerID] - remove container
 docker rm `docker ps -a -q` - remove all stopped containers
 
 
+docker build -t username/name . - build a dockerfile, . for working dir
+
+

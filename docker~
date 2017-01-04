@@ -19,6 +19,14 @@ docker run [image:tag] - runs the image
 docker run -d [image] - run in background 
 docker run -it [image] [command to run /bin/bash] - interactive and terminal mode
 docker run --name=[name] image - to give your container a name
+docker run --name=[name] -P [image] - make the ports available on the host on random port 
+
+docker run -d -p 8080:80,8443:443 image - bind container port to specific port so bind 8080 to 80 on the container
+docker port $CONTAINERPORT - display the ports used by containers
+
+docker run -d -v [mountpoint] image - make a mountpoint
+example:
+docker run -d -p 8080:80 --name=server4 -v /home/user/www:/usr/share/nginx/html nginx - will link the www folder from the host to the container
 
 docker inspect [image or imageID] - show information about the image
 
