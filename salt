@@ -1,0 +1,11 @@
+salt-key --list-all
+salt '*' test.ping
+salt "*" cmd.run "ls -l /etc"
+salt "*" disk.usage
+salt "*" pkg.install cowsay
+salt "*" cmd.run "cowsay"
+salt "*" cmd.run "whereis cowsay"
+salt "*" cmd.run "/usr/games/cowsay"
+salt "*" network.interfaces
+salt "minion1" disk.usage
+
