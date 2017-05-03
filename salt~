@@ -13,16 +13,3 @@ salt -G 'os:Ubuntu' test.ping
 salt -E 'minion[0-9]' test.ping
 salt -L 'minion1,minion2' test.ping
 salt -C 'G@os:Ubuntu and minion* or S@192.168.50.*' test.ping
-salt 'minion*' state.apply nettools
-
-Save the .sls files in /srv/salt
-
-nettools.sls
-#### Content of file #####
-install_network_packages:
-  pkg.installed:
-   - pkgs:
-     - rsync
-     - lftp
-     - curl
-#### End of content ####
