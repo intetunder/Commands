@@ -58,6 +58,27 @@ sudo service --status-all - Show all services on the computer
 
 sudo ssm list - display lvm pools and disks
 
+ssh -oHostKeyAlgorithms=+ssh-dss username@addresse 
+
+
+
+Troubleshooting commands:
+lsmod | grep -i iwl
+lspci | grep -i net
+dmesg | grep -i iwl
+dmesg | grep -i network\n
+lspci -nn
+journalctl --system --user
+sudo iwconfig wlp1s0 power off - turn off power saving mode
+netstat -plnt - services on what port
+sudo rmmod iwlmvm iwlwifi && sudo modprobe iwlmvm iwlwifi - re connect to wifi
+sudo du -h -c /usr | tail -1
+
+
+systemctl list-unit-files | grep 
+while true; do COMMAND ; done
+
+sudo nmap -v -sn -n 10.16.6.1/24 -oG - | awk '/Status: Down/{print $2}'
 
 
 
