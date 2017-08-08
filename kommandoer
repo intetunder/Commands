@@ -82,3 +82,5 @@ sudo nmap -v -sn -n 10.16.6.1/24 -oG - | awk '/Status: Down/{print $2}'
 
 
 
+
+sudo kill -9  $(ps aux | grep [username] | awk  '{print $2}')
