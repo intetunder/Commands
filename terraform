@@ -1,0 +1,5 @@
+terraform apply
+terraform plan
+terraform graph
+terraform output 
+terraform output [specific value]
